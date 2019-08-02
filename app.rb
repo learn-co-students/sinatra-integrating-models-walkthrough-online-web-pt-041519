@@ -6,10 +6,6 @@ class App < Sinatra::Base
   get '/' do
     erb :index
   end
-  
-  get '/new' do
-    erb :create_puppy
-  end
 
   post '/' do
     @analyzed_text = TextAnalyzer.new(params[:user_text])
